@@ -10,26 +10,26 @@ public class firstassignment {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter 1 to access information for the "
-        + "2024 Mustang GT and 2 for the 2024 Mustang Darkhorse.");
-        String info = scanner.nextLine();
-        while (info != "1" || info != "2")
+        System.out.print("Enter 1 to access information for the "
+        + "2024 Mustang GT and 2 for the 2024 Mustang Darkhorse: ");
+        int info = scanner.nextInt();
+        while (info != 1 && info != 2)
         {
-            System.out.println("Re-enter a valid input, either 1 or 2");
-            info = scanner.nextLine();
+            System.out.print("Re-enter a valid input, either 1 or 2: ");
+            info = scanner.nextInt();
         }
-        if (info == "1")
+        if (info == 1)
         {
             Scanner newScanner = new Scanner(System.in);
-            System.out.println("Enter 1 for the price of the vehicle, " 
-            + "or 2 for the horsepower");
-            String choice = newScanner.nextLine();
-            while (choice != "1" || info != "2")
+            System.out.print("Enter 1 for the price of the vehicle, " 
+            + "or 2 for the horsepower: ");
+            int choice = newScanner.nextInt();
+            while (choice != 1 && choice != 2)
             {
-            System.out.println("Re-enter a valid input, either 1 or 2");
-            choice = newScanner.nextLine();
+            System.out.print("Re-enter a valid input, either 1 or 2: ");
+            choice = newScanner.nextInt();
             }
-            if (choice == "1")
+            if (choice == 1)
             {
                 GT gtPrice = new GT();
                 gtPrice.printPrice();
@@ -44,15 +44,15 @@ public class firstassignment {
         else
         {
             Scanner anotherScanner = new Scanner(System.in);
-            System.out.println("Enter 1 for the price of the vehicle, " 
-            + "or 2 for the horsepower");
-            String choice = anotherScanner.nextLine();
-            while (choice != "1" || info != "2")
+            System.out.print("Enter 1 for the price of the vehicle, " 
+            + "or 2 for the horsepower: ");
+            int choice = anotherScanner.nextInt();
+            while (choice != 1 && choice != 2)
             {
-            System.out.println("Re-enter a valid input, either 1 or 2");
-            choice = anotherScanner.nextLine();
+            System.out.print("Re-enter a valid input, either 1 or 2");
+            choice = anotherScanner.nextInt();
             }
-            if (choice == "1")
+            if (choice == 1)
             {
                 Darkhorse dhPrice = new Darkhorse();
                 dhPrice.printPrice();
